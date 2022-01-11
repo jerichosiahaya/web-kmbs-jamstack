@@ -7,10 +7,10 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.4.2",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@vue-hero-icons/outline": "^1.7.2",
     "autoprefixer": "^9",
+    "daisyui": "^1.22.0",
     "gridsome": "^0.7.0",
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "postcss": "^7",

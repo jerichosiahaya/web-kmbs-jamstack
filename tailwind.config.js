@@ -11,4 +11,7 @@ module.exports = {
         //  center: true,
         // },
     },
+    plugins: [
+        require('daisyui'),
+    ],
 }
