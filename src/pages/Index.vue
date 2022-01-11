@@ -1,72 +1,158 @@
 <template>
   <div>
-    <div class="navbar shadow-lg bg-neutral text-neutral-content">
-      <div class="px-2 mx-2 navbar-start">
-        <span class="text-lg font-bold"> Kombos Jayapura </span>
-      </div>
-
-      <div class="hidden px-2 mx-2 navbar-center lg:flex">
-        <div class="flex items-stretch">
-          <a class="btn btn-ghost btn-sm rounded-btn"> Home </a>
-          <a class="btn btn-ghost btn-sm rounded-btn"> About </a>
-          <a class="btn btn-ghost btn-sm rounded-btn"> Services </a>
-          <a class="btn btn-ghost btn-sm rounded-btn"> Contact </a>
+    <Layout>
+      <div
+        class="hero min-h-screen"
+        style="
+          background-image: url('https://tsoimageprod.azureedge.net/sys-master-hybrismedia/h22/h48/8821325824030/Daftar%20Bengkel%20Mobil%20Toyota%20Auto2000%20di%20Liburan%20Akhir%20Tahun%202020.png');
+        "
+      >
+        <div class="hero-overlay bg-opacity-75"></div>
+        <div class="text-center hero-content text-neutral-content">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">CV Kombos Toyota Jayapura</h1>
+            <p class="mb-5">
+              Senin - Jumat: 08.00 - 16.00 WIT | Sabtu: 08.00 - 12.00 WIT |
+              Minggu: Tutup
+            </p>
+            <button class="btn btn-primary">Booking service</button>
+          </div>
         </div>
       </div>
 
-      <div class="navbar-end">
-        <button class="btn btn-square btn-ghost">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            class="inline-block w-6 h-6 stroke-current"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-            ></path>
-          </svg>
-        </button>
-        <button class="btn btn-square btn-ghost">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            class="inline-block w-6 h-6 stroke-current"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            ></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <div
-      class="hero min-h-screen"
-      style="
-        background-image: url('https://tsoimageprod.azureedge.net/sys-master-hybrismedia/h22/h48/8821325824030/Daftar%20Bengkel%20Mobil%20Toyota%20Auto2000%20di%20Liburan%20Akhir%20Tahun%202020.png');
-      "
-    >
-      <div class="hero-overlay bg-opacity-60"></div>
-      <div class="text-center hero-content text-neutral-content">
-        <div class="max-w-md">
-          <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-          <p class="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button class="btn btn-primary">Booking service</button>
+      <div class="mb-7 product-cards lg:mt-8">
+        <div class="flex flex-col justify-evenly lg:flex-row lg:space-x-0">
+          <div class="item mt-4 mb-4">
+            <div
+              class="
+                card
+                shadow-2xl
+                lg:card-side
+                bg-base
+                text-neutral-base
+                m-5
+                lg:m-0
+              "
+            >
+              <div class="card-body">
+                <h2 class="card-title text-center">LOKASI</h2>
+                <p class="lg:hidden">
+                  Jln. Kelapa Dua, Entrop, Jayapura Selatan (samping Hotel
+                  Sahid). <br />
+                  <br />
+                  Senin - Jumat: 08.00 - 17.00 WIT <br />
+                  Sabtu: 08.00 - 12.00 WIT <br />
+                  Minggu: Tutup
+                </p>
+                <div class="justify-center card-actions">
+                  <button class="btn btn-primary">
+                    Google Maps
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      class="inline-block w-6 h-6 ml-2 stroke-current"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mt-4 mb-4">
+            <div
+              class="
+                card
+                shadow-2xl
+                lg:card-side
+                bg-base
+                text-neutral-base
+                m-5
+                lg:m-0
+              "
+            >
+              <div class="card-body">
+                <h2 class="card-title text-center">PROMO / DISKON</h2>
+                <p class="lg:hidden">
+                  Diskon hari raya, serta promo-promo lainnya dapat dicek di
+                  sini.
+                </p>
+                <div class="justify-center card-actions">
+                  <button class="btn btn-primary">
+                    Cek Promo
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      class="inline-block w-6 h-6 ml-2 stroke-current"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item mt-4 mb-4">
+            <div
+              class="
+                card
+                shadow-2xl
+                lg:card-side
+                bg-base
+                text-neutral-base
+                m-5
+                lg:m-0
+              "
+            >
+              <div class="card-body">
+                <h2 class="card-title text-center">ONLINE BOOKING</h2>
+                <p class="lg:hidden">
+                  Booking terlebih dahulu sebelum service lewat Whatsapp dengan
+                  cara klik tombol di bawah ini.
+                </p>
+                <div class="justify-center card-actions">
+                  <button class="btn btn-primary">
+                    Booking Service
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      class="inline-block w-6 h-6 ml-2 stroke-current"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <hr />
+
+      <div class="mt-5 tentang-kami justify-center text-center">
+        <h2>Tentang Kami</h2>
+        <h2>Jam Buka Bengkel</h2>
+        <h2>Galeri Bengkel</h2>
+      </div>
+    </Layout>
   </div>
 </template>
 
