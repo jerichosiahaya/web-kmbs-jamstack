@@ -12,10 +12,13 @@
           <div class="max-w-md">
             <h1 class="mb-5 text-5xl font-bold">CV Kombos Toyota Jayapura</h1>
             <p class="mb-5">
-              Senin - Jumat: 08.00 - 16.00 WIT | Sabtu: 08.00 - 12.00 WIT |
-              Minggu: Tutup
+              Jln. Raya Kelapa Dua, Entrop, Jayapura Selatan, Ardipura, Kota
+              Jayapura, 99221 (samping Hotel Sahid)
             </p>
-            <button class="btn btn-primary">Booking service</button>
+            <button class="btn btn-primary">
+              Booking service
+              <font-awesome class="ml-2" :icon="['fab', 'fa-whatsapp']" />
+            </button>
           </div>
         </div>
       </div>
@@ -23,26 +26,19 @@
       <div class="mb-7 product-cards lg:mt-8">
         <div class="flex flex-col justify-evenly lg:flex-row lg:space-x-0">
           <div class="item mt-4 mb-4">
-            <div
-              class="
-                card
-                shadow-2xl
-                lg:card-side
-                bg-base
-                text-neutral-base
-                m-5
-                lg:m-0
-              "
-            >
+            <div class="card shadow-2xl bg-base text-neutral-base m-5 lg:m-0">
               <div class="card-body">
-                <h2 class="card-title text-center">LOKASI</h2>
-                <p class="lg:hidden">
+                <h2 class="card-title text-center">LOKASI BENGKEL</h2>
+
+                <img
+                  src="https://icons.iconarchive.com/icons/atyourservice/service-categories/512/Car-Repair-icon.png"
+                  alt=""
+                  class="w-32 mx-auto mb-7 lg:mb-0"
+                />
+
+                <p class="lg:hidden text-center">
                   Jln. Kelapa Dua, Entrop, Jayapura Selatan (samping Hotel
-                  Sahid). <br />
-                  <br />
-                  Senin - Jumat: 08.00 - 17.00 WIT <br />
-                  Sabtu: 08.00 - 12.00 WIT <br />
-                  Minggu: Tutup
+                  Sahid)
                 </p>
                 <div class="justify-center card-actions">
                   <button class="btn btn-primary">
@@ -79,7 +75,12 @@
             >
               <div class="card-body">
                 <h2 class="card-title text-center">PROMO / DISKON</h2>
-                <p class="lg:hidden">
+                <img
+                  src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/256/coupon-icon.png"
+                  alt=""
+                  class="w-32 mx-auto mb-7 lg:mb-0"
+                />
+                <p class="lg:hidden text-center">
                   Diskon hari raya, serta promo-promo lainnya dapat dicek di
                   sini.
                 </p>
@@ -118,7 +119,12 @@
             >
               <div class="card-body">
                 <h2 class="card-title text-center">ONLINE BOOKING</h2>
-                <p class="lg:hidden">
+                <img
+                  src="https://icons.iconarchive.com/icons/limav/flat-gradient-social/256/Whatsapp-icon.png"
+                  alt=""
+                  class="w-32 mx-auto mb-7 lg:mb-0"
+                />
+                <p class="lg:hidden text-center">
                   Booking terlebih dahulu sebelum service lewat Whatsapp dengan
                   cara klik tombol di bawah ini.
                 </p>
