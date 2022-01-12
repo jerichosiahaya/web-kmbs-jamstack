@@ -6,12 +6,18 @@ module.exports = {
         './src/**/*.html',
     ],
     theme: {
+        extend: {
+            width: {
+                '600': '600px',
+            },
+        }
         // your tailwind config goes here
         // container: {
         //  center: true,
         // },
     },
     plugins: [
+        require('@tailwindcss/typography'),
         require('daisyui'),
     ],
     daisyui: {

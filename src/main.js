@@ -8,5 +8,5 @@ export default function (Vue, {
   isClient
 }) {
   // Set default layout as a global component
-  Vue.component('Layout', DefaultLayout)
+  Vue.component('Layout', DefaultLayout);
 }

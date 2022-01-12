@@ -147,19 +147,162 @@
       </div>
       <hr />
 
-      <div class="mt-5 tentang-kami justify-center text-center">
-        <h2>Tentang Kami</h2>
-        <h2>Jam Buka Bengkel</h2>
-        <h2>Galeri Bengkel</h2>
+      <div class="mt-5 mb-5 tentang-kami justify-center text-center">
+        <div
+          class="
+            flex flex-col
+            items-center
+            lg:items-start lg:flex-row
+            justify-center
+            lg:space-x-10
+          "
+        >
+          <div class="prose item">
+            <h2>Tentang Kami</h2>
+            <div
+              class="
+                card
+                text-justify
+                lg:card-side
+                bg-accent-focus
+                text-accent-content
+                m-5
+                lg:m-0
+                rounded-none
+              "
+            >
+              <div class="card-body">
+                <p>
+                  <b>CV Kombos Toyota Jayapura </b> merupakan Bengkel Authorized
+                  Dealer Toyota terbesar di Jayapura di bawah naungan PT. Toyota
+                  Astra Motor. Kami ada guna mempermudah anda dalam proses
+                  perbaikan dan perawatan mobil Toyota anda. Percayakan
+                  perawatan mobil Toyota anda pada kami. Dapatkan penawaran
+                  spesial dari kami khusus untuk anda pelanggan setia Toyota.
+                  Kami senantiasa selalu memberi pelayanan terbaik kepada
+                  seluruh pelanggan, karena kepuasan pelanggan selalu menjadi
+                  prioritas kami. Layanan yang kami sediakan, meliputi: Servis
+                  Berkala, Toyota Home Service, General Repair, Body Repair and
+                  Paint, Engine Tune Up, Electrical, Spooring/Balancing, Parts
+                  Sales, dsb.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- jam buka bengkel -->
+          <div class="mt-7 lg:mt-0 prose item">
+            <h2>Jam Buka Bengkel</h2>
+            <div class="overflow-x-auto">
+              <table class="table w-full table-zebra">
+                <thead>
+                  <tr>
+                    <th>Hari</th>
+                    <th>Jam</th>
+                    <th>Keterangan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Senin - Jumat</td>
+                    <td>08.00 - 17.00 WIT</td>
+                    <td>Operasional</td>
+                  </tr>
+                  <tr>
+                    <td>Senin - Jumat</td>
+                    <td>12.00 - 13.00 WIT</td>
+                    <td>Istirahat</td>
+                  </tr>
+                  <tr>
+                    <td>Sabtu</td>
+                    <td>08.00 - 12.00 WIT</td>
+                    <td>Operasional</td>
+                  </tr>
+                  <tr>
+                    <td>Minggu</td>
+                    <td>-</td>
+                    <td>Tutup</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="galeri-bengkel mt-5 justify-center text-center">
+        <h2 style="font-size: 1.2em; font-weight: bold">Galeri Bengkel</h2>
+        <div class="app-container">
+          <div
+            id="lightgallery"
+            class="
+              flex flex-col
+              lg:flex-row
+              items-center
+              justify-center
+              mt-3
+              mb-10
+            "
+          >
+            <a
+              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-6-lg.jpg"
+            >
+              <img
+                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-6.jpg"
+              />
+            </a>
+            <a
+              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-12-lg.jpg"
+            >
+              <img
+                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-12.jpg"
+              />
+            </a>
+            <a
+              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-6-lg.jpg"
+            >
+              <img
+                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-6.jpg"
+              />
+            </a>
+            <a
+              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-6-lg.jpg"
+            >
+              <img
+                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-6.jpg"
+              />
+            </a>
+            <a
+              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-6-lg.jpg"
+            >
+              <img
+                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-6.jpg"
+              />
+            </a>
+          </div>
+        </div>
+        <button class="btn btn-neutral mb-10">LIHAT LEBIH BANYAK FOTO</button>
       </div>
     </Layout>
   </div>
 </template>
 
 <script>
+import "lightgallery.js";
+import "lightgallery.js/dist/css/lightgallery.css";
 export default {
   metaInfo: {
     title: "Beranda",
+  },
+  data() {
+    return {
+      imageList: [],
+    };
+  },
+  mounted() {
+    const el = document.getElementById("lightgallery");
+    window.lightGallery(el);
   },
 };
 </script>

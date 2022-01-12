@@ -19,8 +19,6 @@
       <div class="hidden px-2 mx-2 navbar-center lg:flex">
         <div class="flex items-stretch">
           <a class="btn btn-ghost btn-sm rounded-btn"> Home </a>
-          <a class="btn btn-ghost btn-sm rounded-btn"> Servis </a>
-          <a class="btn btn-ghost btn-sm rounded-btn"> Tentang </a>
           <a class="btn btn-ghost btn-sm rounded-btn"> Kontak </a>
           <a class="btn btn-ghost btn-sm rounded-btn"> Lowongan </a>
         </div>
@@ -51,8 +49,6 @@
       class="responsive-navbar flex flex-col bg-primary-content"
     >
       <a class="btn btn-ghost btn-sm rounded-btn"> Home </a>
-      <a class="btn btn-ghost btn-sm rounded-btn"> Servis </a>
-      <a class="btn btn-ghost btn-sm rounded-btn"> Tentang </a>
       <a class="btn btn-ghost btn-sm rounded-btn"> Kontak </a>
       <a class="btn btn-ghost btn-sm rounded-btn"> Lowongan </a>
     </div>
