@@ -237,7 +237,7 @@
       </div>
       <hr />
 
-      <div class="galeri-bengkel mt-5 justify-center text-center">
+      <!-- <div class="galeri-bengkel mt-5 justify-center text-center">
         <h2 style="font-size: 1.2em; font-weight: bold">Galeri Bengkel</h2>
         <div class="app-container">
           <div
@@ -289,14 +289,14 @@
           </div>
         </div>
         <button class="btn btn-neutral mb-10">LIHAT LEBIH BANYAK FOTO</button>
-      </div>
+      </div> -->
     </Layout>
   </div>
 </template>
 
 <script>
-import "lightgallery.js";
-import "lightgallery.js/dist/css/lightgallery.css";
+// import "lightgallery.js";
+// import "lightgallery.js/dist/css/lightgallery.css";
 export default {
   metaInfo: {
     title: "Beranda",
@@ -306,10 +306,10 @@ export default {
       imageList: [],
     };
   },
-  mounted() {
-    const el = document.getElementById("lightgallery");
-    window.lightGallery(el);
-  },
+  // mounted() {
+  //   const el = document.getElementById("lightgallery");
+  //   window.lightGallery(el);
+  // },
 };
 </script>
 
