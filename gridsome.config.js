@@ -8,7 +8,7 @@
 const tailwindcss = require("tailwindcss");
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Toyota Service Jayapura',
   css: {
     loaderOptions: {
       postcss: {

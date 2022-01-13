@@ -237,59 +237,26 @@
       </div>
       <hr />
 
-      <!-- <div class="galeri-bengkel mt-5 justify-center text-center">
+      <div class="galeri-bengkel mt-5 justify-center text-center">
         <h2 style="font-size: 1.2em; font-weight: bold">Galeri Bengkel</h2>
-        <div class="app-container">
-          <div
-            id="lightgallery"
-            class="
-              flex flex-col
-              lg:flex-row
-              items-center
-              justify-center
-              mt-3
-              mb-10
-            "
+
+        <button class="mt-5 btn btn-neutral mb-10">
+          LIHAT LEBIH BANYAK FOTO
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="inline-block w-6 h-6 ml-2 stroke-current"
           >
-            <a
-              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-6-lg.jpg"
-            >
-              <img
-                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-6.jpg"
-              />
-            </a>
-            <a
-              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-12-lg.jpg"
-            >
-              <img
-                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-12.jpg"
-              />
-            </a>
-            <a
-              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-6-lg.jpg"
-            >
-              <img
-                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-6.jpg"
-              />
-            </a>
-            <a
-              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-6-lg.jpg"
-            >
-              <img
-                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-6.jpg"
-              />
-            </a>
-            <a
-              href="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/image-6-lg.jpg"
-            >
-              <img
-                src="https://dzine.io/products/lightgallery-wp-plugin/static/images/demo/thumb-6.jpg"
-              />
-            </a>
-          </div>
-        </div>
-        <button class="btn btn-neutral mb-10">LIHAT LEBIH BANYAK FOTO</button>
-      </div> -->
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+        </button>
+      </div>
     </Layout>
   </div>
 </template>
