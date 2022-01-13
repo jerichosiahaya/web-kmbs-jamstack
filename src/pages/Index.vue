@@ -17,7 +17,7 @@
             </p>
             <button class="btn btn-primary">
               Booking service
-              <font-awesome class="ml-2" :icon="['fab', 'fa-whatsapp']" />
+              <font-awesome-icon :icon="['fab', 'whatsapp']" />
             </button>
           </div>
         </div>
