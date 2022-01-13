@@ -18,7 +18,7 @@
       <!-- seharusnya dibikin hamburger -->
       <div class="hidden px-2 mx-2 navbar-center lg:flex">
         <div class="flex items-stretch">
-          <g-link class="btn btn-ghost btn-sm rounded-btn">
+          <g-link to="/index" class="btn btn-ghost btn-sm rounded-btn">
             Home
           </g-link>
           <g-link to="/kontak" class="btn btn-ghost btn-sm rounded-btn">
