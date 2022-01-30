@@ -62,5 +62,10 @@ export default {
   metaInfo: {
     title: "Kontak",
   },
+  data() {
+    return {
+      valTest: "",
+    };
+  },
 };
 </script>

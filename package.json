@@ -14,6 +14,7 @@
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@vue-hero-icons/outline": "^1.7.2",
     "autoprefixer": "^9",
+    "axios": "^0.25.0",
     "daisyui": "^1.22.0",
     "gridsome": "^0.7.0",
     "gridsome-plugin-tailwindcss": "^4.1.1",
