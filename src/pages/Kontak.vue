@@ -1,8 +1,19 @@
 <template>
   <div>
     <Layout>
+      <div
+        class="hero h-24 lg:h-44 mb-7"
+        style="
+          background-image: url('https://tsoimageprod.azureedge.net/sys-master-hybrismedia/h22/h48/8821325824030/Daftar%20Bengkel%20Mobil%20Toyota%20Auto2000%20di%20Liburan%20Akhir%20Tahun%202020.png');
+        "
+      >
+        <div class="hero-overlay flex items-center h-24 lg:h-44 bg-opacity-90">
+          <div class="text-white ml-9 text-2xl font-medium lg:text-4xl">
+            <p>Kontak</p>
+          </div>
+        </div>
+      </div>
       <div class="prose m-7">
-        <h1>Kontak</h1>
         <p>Hubungi bengkel melalui nomor telepon ini:</p>
         <ul class="none">
           <li>

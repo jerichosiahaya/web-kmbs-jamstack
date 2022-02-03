@@ -15,10 +15,14 @@
               Jln. Raya Kelapa Dua, Entrop, Jayapura Selatan, Ardipura, Kota
               Jayapura, 99221 (samping Hotel Sahid)
             </p>
-            <button class="btn btn-primary">
-              Booking service
-              <font-awesome-icon :icon="['fab', 'whatsapp']" />
-            </button>
+            <a
+              href="https://api.whatsapp.com/send?phone=6281381669200&text=Halo,%20saya%20mau%20booking%20servis,%20apakah%20bisa?"
+            >
+              <button class="btn btn-primary">
+                Booking service
+                <font-awesome-icon :icon="['fab', 'whatsapp']" />
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -129,22 +133,26 @@
                   cara klik tombol di bawah ini.
                 </p>
                 <div class="justify-center card-actions">
-                  <button class="btn btn-primary">
-                    Booking Service
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      class="inline-block w-6 h-6 ml-2 stroke-current"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5l7 7-7 7"
-                      ></path>
-                    </svg>
-                  </button>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=6281381669200&text=Halo,%20saya%20mau%20booking%20servis,%20apakah%20bisa?"
+                  >
+                    <button class="btn btn-primary">
+                      Booking Service
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        class="inline-block w-6 h-6 ml-2 stroke-current"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5l7 7-7 7"
+                        ></path>
+                      </svg>
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

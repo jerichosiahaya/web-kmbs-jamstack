@@ -24,7 +24,9 @@
           <g-link to="/kontak" class="btn btn-ghost btn-sm rounded-btn">
             Kontak
           </g-link>
-          <a class="btn btn-ghost btn-sm rounded-btn"> Lowongan </a>
+          <g-link to="/lowongan" class="btn btn-ghost btn-sm rounded-btn">
+            Lowongan
+          </g-link>
         </div>
       </div>
 
