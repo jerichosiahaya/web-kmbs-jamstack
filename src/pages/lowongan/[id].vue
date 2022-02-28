@@ -148,6 +148,9 @@
         <div class="buttonApply m-3 pt-8 pb-5">
           <button class="btn btn-primary w-full" @click="apply()">KIRIM</button>
         </div>
+        <!-- <div class="buttonApply m-3 pt-8 pb-5">
+          <button class="btn btn-primary w-full" @click="getBestServer()">TEST BUTTON</button>
+        </div> -->
       </div>
     </Layout>
   </div>
@@ -161,8 +164,11 @@ export default {
   },
   data() {
     return {
-      job: null,
+      job: {
+        title: ""
+      },
       applicants: {
+        name: "",
         id_job: this.$route.params.id,
         relationship: "",
         graduate: "",
@@ -178,51 +184,57 @@ export default {
       }
       return input;
     },
+    // deprecated
     printArray() {
       console.log(this.applicants);
     },
-    async getBestServer() {
-      var bestServer = null;
-      await axios
-        .get("https://api.gofile.io/getServer")
-        .then((response) => (this.server = response.data.data.server))
-        .catch((error) => console.log(error));
-      console.log(this.server);
-    },
+    // deprecated
     setBestServer(data) {
       this.server = data;
+    },
+    // callback function to get best server b4 uploading the file
+    //TODO : change to traditional function if there is an error -- DONE
+    async getBestServer() {
+      try {
+        const response = await axios.get("https://api.gofile.io/getServer");
+        this.server = response.data.data.server;
+        console.log("axios settles = "+ this.server);
+        console.log("data = "+ this.server);
+      } catch (error) {
+        console.log(error);
+      }
     },
     async uploadFile(event) {
       await this.getBestServer();
       let formData = new FormData();
       formData.append("file", event.target.files[0]);
-      axios
-        .post("https://" + this.server + ".gofile.io/uploadFile", formData, {
+      try {
+        const response = await axios.post("https://"+this.server+".gofile.io/uploadFile",formData, {
           headers: {
             "Content-Type": "multipart/form-data",
-          },
-        })
-        .then((response) => {
-          alert("File berhasil diupload");
-          this.applicants.curriculum_vitae = response.data.data.directLink;
-        })
-        .catch((error) => console.log(error));
+          }
+        });
+        this.applicants.curriculum_vitae = response.data.data.directLink;
+        alert("File berhasil diupload!");
+        console.log(this.applicants.curriculum_vitae);
+      } catch (error) {
+        console.log(error);
+      }
     },
     async apply() {
-      await axios
-        .post("https://kombos.hasura.app/api/rest/apply/", this.applicants, {
+      try {
+        const response = await axios.post("https://kombos.hasura.app/api/rest/apply/", this.applicants, {
           headers: {
-            "x-hasura-admin-secret":
-              "bgohHXc96EugK5ghUcFjEMk9XOJcZHGZFiqGmDGEG82pnmIFeJUijpebXf5s7PKF",
+            "x-hasura-admin-secret": "bgohHXc96EugK5ghUcFjEMk9XOJcZHGZFiqGmDGEG82pnmIFeJUijpebXf5s7PKF",
           },
-        })
-        .then((response) => {
-          console.log(response);
-          alert("Lamaran berhasil terkirim");
-          this.applicants = null;
-          this.file = null;
-        })
-        .catch((error) => console.log(error));
+        });
+        console.log(response);
+        alert("Lamaran berhasil terkirim!");
+        this.applicants = null;
+        this.file = null;
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
   mounted() {

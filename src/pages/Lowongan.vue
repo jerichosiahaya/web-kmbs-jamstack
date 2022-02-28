@@ -23,53 +23,42 @@
           />
         </div>
 
+        <div class="" v-if="isLoading == true">
+          <p>Loading in progress</p>
+        </div>
+
         <div
+          v-else
           class="jobCard w-full border-black rounded-xl shadow-md mb-6"
           v-for="job in jobs"
           :key="job.id"
         >
-          <div class="titleCard ml-7 mt-7 mr-7 mb-3 text-xl font-bold">
-            <p>{{ job.title }}</p>
-          </div>
-          <div class="descCard ml-7 mr-7 mb-5 text-justify">
-            <p>
-              {{ truncateText(job.description) }}
-            </p>
-          </div>
-          <div class="buttonCard ml-7 mr-7 mb-5">
-            <g-link :to="'/lowongan/' + job.id">
-              <button class="btn btn-success">
-                Lamar
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  class="inline-block w-6 h-6 ml-2 stroke-current"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  ></path>
-                </svg>
-              </button>
-            </g-link>
-          </div>
+          <job-card 
+          :jobTitle= "job.title"
+          :jobDesc= "job.description"
+          :jobId = "job.id"
+          />
         </div>
+
       </div>
+      
     </Layout>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import JobCard from '../components/jobCard.vue';
 export default {
   metaInfo: {
     title: "Lowongan",
   },
+  components : {
+    JobCard
+  },
   data() {
     return {
+      isLoading: true,
       jobs: {},
     };
   },
@@ -80,17 +69,19 @@ export default {
       }
       return input;
     },
+    async retrieveJobs() {
+      try {
+        const response = await axios.get("https://kombos.hasura.app/api/rest/jobs", { headers: { "x-hasura-admin-secret": "bgohHXc96EugK5ghUcFjEMk9XOJcZHGZFiqGmDGEG82pnmIFeJUijpebXf5s7PKF",}});
+        this.jobs = response.data.jobs;
+        this.isLoading = false;
+      } 
+      catch (error) {
+        console.log(error);
+      }
+    }
   },
   mounted() {
-    axios
-      .get("https://kombos.hasura.app/api/rest/jobs", {
-        headers: {
-          "x-hasura-admin-secret":
-            "bgohHXc96EugK5ghUcFjEMk9XOJcZHGZFiqGmDGEG82pnmIFeJUijpebXf5s7PKF",
-        },
-      })
-      .then((response) => (this.jobs = response.data.jobs))
-      .catch((error) => console.log(error));
+    this.retrieveJobs();
   },
 };
 </script>

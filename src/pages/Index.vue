@@ -20,7 +20,7 @@
             >
               <button class="btn btn-primary">
                 Booking service
-                <font-awesome-icon :icon="['fab', 'whatsapp']" />
+                <font-awesome-icon :icon="['fab', 'whatsapp']" class="ml-2" />
               </button>
             </a>
           </div>
@@ -45,22 +45,24 @@
                   Sahid)
                 </p>
                 <div class="justify-center card-actions">
-                  <button class="btn btn-primary">
-                    Google Maps
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      class="inline-block w-6 h-6 ml-2 stroke-current"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5l7 7-7 7"
-                      ></path>
-                    </svg>
-                  </button>
+                  <a href="https://g.page/toyotaservicejayapura?share">
+                    <button class="btn btn-primary">
+                      Google Maps
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        class="inline-block w-6 h-6 ml-2 stroke-current"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5l7 7-7 7"
+                        ></path>
+                      </svg>
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -247,7 +249,7 @@
 
       <div class="galeri-bengkel mt-5 justify-center text-center">
         <h2 style="font-size: 1.2em; font-weight: bold">Galeri Bengkel</h2>
-
+          
         <button class="mt-5 btn btn-neutral mb-10">
           LIHAT LEBIH BANYAK FOTO
           <svg
@@ -272,9 +274,13 @@
 <script>
 // import "lightgallery.js";
 // import "lightgallery.js/dist/css/lightgallery.css";
+import Carousel from "@/components/Carousel.vue";
 export default {
   metaInfo: {
     title: "Beranda",
+  },
+  components: {
+    Carousel,
   },
   data() {
     return {
